@@ -1,2 +1,2 @@
-# frontend-clothing-store
+# pet-project
 html&amp;css practice 
