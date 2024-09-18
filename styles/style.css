@@ -1,1 +1,78 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+.projects-storage {
+  display: grid;
+  grid-auto-columns: repeat(10, 1fr);
+  justify-content: space-around;
+  align-content: center;
+  grid-auto-flow: column;
+  gap: 20px;
+}
+
+.project {
+  min-width: 400px;
+  min-height: 400px;
+}
+
+.bg-c_ylw {
+  background-color: rgb(250, 223, 44);
+}
+
+.progressbar {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+}
+
+.bar {
+  width: 70%;
+  height: 10%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 30px;
+  border: 1px solid rgba(244, 123, 3, 0.915);
+  box-shadow: 5px 5px rgba(244, 123, 3, 0.915);
+}
+
+.bar-ball {
+  width: 15%;
+  height: 100%;
+  background-color: rgb(246, 98, 6);
+  border-radius: 50%;
+  animation-name: bar;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.bar-ball.reverse {
+  animation-name: bar-ball-reverse;
+}
+
+@keyframes bar {
+  50% {
+    translate: 240px;
+    background-color: red;
+    scale: 1;
+  }
+}
+
+@keyframes bar-ball-reverse {
+  0% {
+    translate: 240px;
+    background-color: red;
+  }
+  50% {
+    translate: 0px;
+    background-color: rgb(246, 98, 6);
+  }
+  100% {
+    translate: 240px;
+    background-color: red;
+  }
+}
